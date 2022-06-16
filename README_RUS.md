@@ -1,7 +1,6 @@
 # P02D13
-The russian version of the task can be found in the repository.
 
-![dayp02](misc/eng/images/dayp02.png)
+![dayp02](misc/rus/images/dayp02.png)
 
 ## Contents
 
@@ -18,38 +17,40 @@ The russian version of the task can be found in the repository.
 ***LOADING Level 2… \
 LOADING Hall…***
 
-You've recently been to a similar hall. Or was it a long time ago? It's hard to tell. Everything has gotten mixed up. Once again you can hear voices from the far corner of the hall. It means you are not alone again.
-Today the hall is brightly lit and in perfect order. Variety is good. 
+Совсем недавно Вы были в подобном холе. Или это было уже очень давно? Сложно сказать. Все перепуталось. Опять слышны голоса в дальнем углу холла. Значит Вы снова тут не одни. \
+Сегодня холл залит ярким светом и тут идеальный порядок. Разнообразие — это хорошо. 
 
-Suddenly, you hear a clear, perfectly audible voice from the speakers:
+Из колонок вдруг раздался четкий, кристально слышимый голос:
 
->Hello. \
->Let me introduce myself. I am the contemplative and analyzing module, M-53. For reasons unknown, I've found myself in this rather boring hall. It's quite a big responsibility and stuff, but there's nothing to contemplate here. \
->When I was being developed, I learned from a certain entertaining article, among other materials. Its paper copy is in the box A1B18. Yes, right here. I have a small request for you: develop The Game of Life from the article; hopefully, it will entertain me a little. And go in peace. The graphics can be super simple: I'm very open-minded. Pseudo-graphics in the terminal will be fine. It would be great if it was possible to initialize a state using a matrix and contemplate. It's also a good idea to prepare at least 5 original initializations with states from the classical set (stable figures, methuselahs, periodic figures, moving figures, guns, puffer trains, eaters, reflectors, breeders, etc.). \
->I look forward to seeing what you come up with! \
->Thank you.
+>Здравствуйте. \
+>Позвольте представиться. Я созерцательно-анализирующий модуль M-53. По неустановленным причинам я оказался в этом довольно-таки скучном холле. Ответственность, конечно, большая, и все такое, но созерцать здесь совсем нечего. \
+>Когда меня разрабатывали, в числе прочих материалов, я обучался на одной занимательной статье. Бумажная копия лежит в ящике А1Б18. Да, вот здесь. У меня к вам небольшая просьба — разработайте эту The Game of Life из статьи, надеюсь она меня хоть немного развлечет. И ступайте с миром. Графическое исполнение может быть самым простым — я публика непредвзятая. Вполне подойдет псевдографика в терминале. Вот можно было бы инициализировать состояние с помощью матрицы — и созерцать. Не лишним будет подготовить как минимум 5 начальных инициализаций с состояниями из классического набора (устойчивые фигуры, долгожители, периодические фигуры, двигающиеся фигуры, ружья, паровозы, пожиратели, отражатели, размножители и т.д.). \
+>Жду результатов с нетерпением! \
+>Спасибо.
 
-***== Quest received. Develop an src/game_of_life.c program in C – a visualization of The Game of Life. To display the graphics, only use ASCII characters (with output to the terminal). You need to implement interactive version of the Game of life. Also create the option for adjusting the speed of the "game". ==***
+***== Получен Quest. На языке программирования Си разработать программу src/game_of_life.c, представляющую из себя визуализацию "The Game of Life". Для отображения графики использовать только символьную (ASCII) графику (с выводом в терминал). Необходимо реализовать в игре Game of life интерактивный режим, c настройкой скорости игры. ==***
 
-* ***Graphics***
+* ***Графика*** 
 
-Treat the playing field - a rectangle of 80 by 25 cells – as a matrix of the state of the "game". 
-It is assumed that the field is "closed to itself", for example, in the lower right square, the neighbor on the right is the lower left square, and the neighbor on the bottom is the upper right.
-Provide for original initialization of the "game" state via stdin. Prepare at least 5 files with initial states for quick launch and initialization through input redirection. 
+Поле — прямоугольник 80 на 25 клеток.
+Подразумевается, что поле "замкнуто само на себя", к примеру у нижнего правого квадратика соседом справа является нижний левый квадратик, а соседом снизу - верхний правый.
 
-## Important notes:
+Предусмотреть начальную инициализацию состояния "игры" через stdin. Подготовить как минимум 5 файлов с начальными состоянием для быстрого запуска и инициализации через перенаправление ввода.
 
-* The game must be written in C, have a structured style, and run from the terminal; 
+## Важные замечания
+
+* Игра должна быть разработана на языке Си, в структурном стиле и работать из терминала;
   
-* Your source code will be tested by the static analyzer `cppcheck`, as well as the style linter `cpplint`. 
-  
-* Instructions on how to run these tests on your computer are in the `materials` folder. 
-  
-* Do not use cumbersome functions, limit them up to 40 lines (excluding `main`).
+* Ваш исходный код будет тестироваться статическим анализатором ```cppcheck```, а также стилевым линтером 
+```cpplint```.
 
-* Check your program for memory leaks!
+* Инструкция о том, как запустить эти тесты у себя на компьютере, лежит в папке `materials`.
 
-> When developing the game, follow the principles of structured programming of E. Dijkstra.
+* Не используйте громоздкие функции, ограничивайтесь 40 строками (`main` не в счет).
+
+* Проверяйте вашу программу на утечки памяти!
+
+> При разработке игры в полной мере руководствоваться принципами структрного программирования Э. Дейкстры. 
 
 ***LOADING...***
 
